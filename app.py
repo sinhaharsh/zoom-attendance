@@ -1,11 +1,11 @@
 import streamlit as st
-from nodes import collect_attendance, get_participant_meeting_stats
+from nodes import collect_attendance_from_bunny, get_participant_meeting_stats
 
 st.title("Zoom Attendance Participant Search")
 
 @st.cache_data
 def load_data():
-    return collect_attendance()
+    return collect_attendance_from_bunny()
 
 df = load_data()
 

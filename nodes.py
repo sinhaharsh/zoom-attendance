@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import difflib
 import csv
-
+import streamlit as st
 from datetime import datetime
 
 def extract_actual_start_time(csv_path):
@@ -94,7 +94,7 @@ def collect_attendance_from_bunny(folder_path='suprasidati-2025',storage_zone='z
     import requests
     import tempfile
 
-    api_key = os.environ.get(api_key_env)
+    api_key = st.secrets[api_key_env]
     if not api_key:
         raise ValueError(f"Bunny API key not found in environment variable {api_key_env}")
 

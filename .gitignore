@@ -3,3 +3,4 @@ attendee_reports/
 __pycache__/
 .vscode/
 .DS_Store
+secrets.toml
