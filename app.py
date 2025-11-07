@@ -7,6 +7,9 @@ st.title("Zoom Attendance Participant Search")
 def load_data():
     return collect_attendance_from_bunny()
 
+if st.button("Reload Data"):
+    st.cache_data.clear()
+
 df = load_data()
 
 query = st.text_input("Enter participant name or email to search:")
